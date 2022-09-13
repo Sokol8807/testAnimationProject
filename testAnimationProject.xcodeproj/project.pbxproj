@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDE05C3E28D1040C00797DE2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE05C3D28D1040C00797DE2 /* DataStore.swift */; };
+		FDE05C4028D104CD00797DE2 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE05C3F28D104CD00797DE2 /* Animation.swift */; };
 		FDF19AB428D0AF19006E04B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF19AB328D0AF19006E04B4 /* AppDelegate.swift */; };
 		FDF19AB628D0AF19006E04B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF19AB528D0AF19006E04B4 /* SceneDelegate.swift */; };
-		FDF19AB828D0AF19006E04B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF19AB728D0AF19006E04B4 /* ViewController.swift */; };
+		FDF19AB828D0AF19006E04B4 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF19AB728D0AF19006E04B4 /* AnimationViewController.swift */; };
 		FDF19ABB28D0AF19006E04B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19AB928D0AF19006E04B4 /* Main.storyboard */; };
 		FDF19ABD28D0AF19006E04B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */; };
 		FDF19AC028D0AF19006E04B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABE28D0AF19006E04B4 /* LaunchScreen.storyboard */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FDE05C3D28D1040C00797DE2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		FDE05C3F28D104CD00797DE2 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		FDF19AB028D0AF19006E04B4 /* testAnimationProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testAnimationProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF19AB328D0AF19006E04B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF19AB528D0AF19006E04B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDF19AB728D0AF19006E04B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDF19AB728D0AF19006E04B4 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		FDF19ABA28D0AF19006E04B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDF19ABF28D0AF19006E04B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FDE05C4128D12B6400797DE2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDF19AB728D0AF19006E04B4 /* AnimationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FDE05C4228D12B8700797DE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDE05C3F28D104CD00797DE2 /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDE05C4328D12BA200797DE2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDE05C3D28D1040C00797DE2 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDE05C4428D12BD800797DE2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FDF19AB528D0AF19006E04B4 /* SceneDelegate.swift */,
+				FDF19AB328D0AF19006E04B4 /* AppDelegate.swift */,
+				FDF19AC128D0AF19006E04B4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDE05C4528D12BF900797DE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDE05C4628D12C0E00797DE2 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				FDF19ABE28D0AF19006E04B4 /* LaunchScreen.storyboard */,
+				FDF19AB928D0AF19006E04B4 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		FDF19AA728D0AF19006E04B4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +113,12 @@
 		FDF19AB228D0AF19006E04B4 /* testAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
-				FDF19AB328D0AF19006E04B4 /* AppDelegate.swift */,
-				FDF19AB528D0AF19006E04B4 /* SceneDelegate.swift */,
-				FDF19AB728D0AF19006E04B4 /* ViewController.swift */,
-				FDF19AB928D0AF19006E04B4 /* Main.storyboard */,
-				FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */,
-				FDF19ABE28D0AF19006E04B4 /* LaunchScreen.storyboard */,
-				FDF19AC128D0AF19006E04B4 /* Info.plist */,
+				FDE05C4128D12B6400797DE2 /* ViewControllers */,
+				FDE05C4228D12B8700797DE2 /* Models */,
+				FDE05C4328D12BA200797DE2 /* Services */,
+				FDE05C4628D12C0E00797DE2 /* StoryBoards */,
+				FDE05C4528D12BF900797DE2 /* Resources */,
+				FDE05C4428D12BD800797DE2 /* App */,
 			);
 			path = testAnimationProject;
 			sourceTree = "<group>";
@@ -146,8 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF19AB828D0AF19006E04B4 /* ViewController.swift in Sources */,
+				FDF19AB828D0AF19006E04B4 /* AnimationViewController.swift in Sources */,
+				FDE05C3E28D1040C00797DE2 /* DataStore.swift in Sources */,
 				FDF19AB428D0AF19006E04B4 /* AppDelegate.swift in Sources */,
+				FDE05C4028D104CD00797DE2 /* Animation.swift in Sources */,
 				FDF19AB628D0AF19006E04B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
