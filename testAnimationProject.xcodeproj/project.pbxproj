@@ -13,6 +13,7 @@
 		FDF19ABB28D0AF19006E04B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19AB928D0AF19006E04B4 /* Main.storyboard */; };
 		FDF19ABD28D0AF19006E04B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */; };
 		FDF19AC028D0AF19006E04B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABE28D0AF19006E04B4 /* LaunchScreen.storyboard */; };
+		FDF19AC928D0B160006E04B4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = FDF19AC828D0B160006E04B4 /* SpringAnimation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF19AC928D0B160006E04B4 /* SpringAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = testAnimationProject;
+			packageProductDependencies = (
+				FDF19AC828D0B160006E04B4 /* SpringAnimation */,
+			);
 			productName = testAnimationProject;
 			productReference = FDF19AB028D0AF19006E04B4 /* testAnimationProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = FDF19AA728D0AF19006E04B4;
+			packageReferences = (
+				FDF19AC728D0B160006E04B4 /* XCRemoteSwiftPackageReference "SpringAnimation" */,
+			);
 			productRefGroup = FDF19AB128D0AF19006E04B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,7 +312,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +340,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDF19AC728D0B160006E04B4 /* XCRemoteSwiftPackageReference "SpringAnimation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LexDeBash/SpringAnimation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDF19AC828D0B160006E04B4 /* SpringAnimation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDF19AC728D0B160006E04B4 /* XCRemoteSwiftPackageReference "SpringAnimation" */;
+			productName = SpringAnimation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDF19AA828D0AF19006E04B4 /* Project object */;
 }
