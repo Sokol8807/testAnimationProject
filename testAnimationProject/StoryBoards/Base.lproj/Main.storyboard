@@ -103,8 +103,8 @@
                         <outlet property="durationLabel" destination="hZw-gb-Sp6" id="P9y-oE-iuI"/>
                         <outlet property="forceLabel" destination="Y5o-eE-IW5" id="wyS-Mr-y6O"/>
                         <outlet property="presetLabel" destination="X8K-Ki-eyr" id="H1Z-0w-ghq"/>
+                        <outlet property="runButton" destination="Opb-BG-zwr" id="Tnv-mi-G9n"/>
                         <outlet property="springAnimationView" destination="MOW-2v-PdZ" id="gXB-GS-Ekc"/>
-                        <outlet property="springButton" destination="Opb-BG-zwr" id="Tnv-mi-G9n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

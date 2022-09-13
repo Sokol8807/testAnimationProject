@@ -9,7 +9,6 @@ import SpringAnimation
 import UIKit
 
 struct Animation {
-    
     let nameAnimation: AnimationPreset
     let curveName: AnimationCurve
     let forceValue = CGFloat.random(in: 0...2)
@@ -24,7 +23,7 @@ extension Animation {
         
         let animations = dataStore.animations.shuffled()
         let curves = dataStore.curves.shuffled()
-
+        
         
         for index in 0..<animations.count {
             let animation = Animation(

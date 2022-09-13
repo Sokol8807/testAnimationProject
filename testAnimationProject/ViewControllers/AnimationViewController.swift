@@ -9,11 +9,11 @@ import UIKit
 import SpringAnimation
 
 class AnimationViewController: UIViewController {
-    
-    
+    let animation = Animation.getAnimationList()
+//    var counter = 0
     
     @IBOutlet var springAnimationView: SpringView!
-    @IBOutlet var springButton: UIButton!
+    @IBOutlet var runButton: UIButton!
     
     @IBOutlet var presetLabel: UILabel!
     @IBOutlet var curveLabel: UILabel!
@@ -25,29 +25,27 @@ class AnimationViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
 
+    
     @IBAction func springButtonPressed(_ sender: UIButton) {
-        let animation = Animation.getAnimationList()
         
-        guard let animatioName = animation.first?.nameAnimation else {return}
-        guard let animationCurve = animation.first?.curveName else {return}
-        guard let animationForceValue = animation.first?.forceValue else {return}
-        guard let animationDurationValue = animation.first?.durationValue else {return}
-        guard let animationDelay = animation.first?.delayValue else {return}
-        
+        guard let animatioName = animation.randomElement()?.nameAnimation else {return}
+        guard let animationCurve = animation.randomElement()?.curveName else {return}
+        guard let animationForceValue = animation.randomElement()?.forceValue else {return}
+        guard let animationDurationValue = animation.randomElement()?.durationValue else {return}
+        guard let animationDelay = animation.randomElement()?.delayValue else {return}
+
         springAnimationView.animation = animatioName.rawValue
         springAnimationView.curve = animationCurve.rawValue
         springAnimationView.force = animationForceValue
         springAnimationView.duration = animationDurationValue
         springAnimationView.delay = animationDelay
         
-        springButton.setTitle(animatioName.rawValue, for: .normal)
+        runButton.setTitle(animatioName.rawValue, for: .normal)
         springAnimationView.animate()
         
         setupLable()
+        
         
     }
     
@@ -59,5 +57,5 @@ class AnimationViewController: UIViewController {
         delayLabel.text = "delay:" + " " + String(Float(springAnimationView.delay))
         
     }
-
+    
 }
