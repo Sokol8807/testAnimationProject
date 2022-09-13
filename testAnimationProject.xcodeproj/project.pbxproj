@@ -15,7 +15,7 @@
 		FDF19ABB28D0AF19006E04B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19AB928D0AF19006E04B4 /* Main.storyboard */; };
 		FDF19ABD28D0AF19006E04B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABC28D0AF19006E04B4 /* Assets.xcassets */; };
 		FDF19AC028D0AF19006E04B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF19ABE28D0AF19006E04B4 /* LaunchScreen.storyboard */; };
-		FDF19AC928D0B160006E04B4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = FDF19AC828D0B160006E04B4 /* SpringAnimation */; };
+		FDF19AC928D0B160006E04B4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = FDF19AC828D0B160006E04B4 /* SpringAnimation */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +72,6 @@
 			children = (
 				FDF19AB528D0AF19006E04B4 /* SceneDelegate.swift */,
 				FDF19AB328D0AF19006E04B4 /* AppDelegate.swift */,
-				FDF19AC128D0AF19006E04B4 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 		FDF19AB228D0AF19006E04B4 /* testAnimationProject */ = {
 			isa = PBXGroup;
 			children = (
+				FDF19AC128D0AF19006E04B4 /* Info.plist */,
 				FDE05C4128D12B6400797DE2 /* ViewControllers */,
 				FDE05C4228D12B8700797DE2 /* Models */,
 				FDE05C4328D12BA200797DE2 /* Services */,

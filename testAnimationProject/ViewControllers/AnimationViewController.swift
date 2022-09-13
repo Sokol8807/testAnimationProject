@@ -10,7 +10,7 @@ import SpringAnimation
 
 class AnimationViewController: UIViewController {
     
-    let animation = Animation.getAnimationList()
+    
     
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var springButton: UIButton!
@@ -30,7 +30,7 @@ class AnimationViewController: UIViewController {
     }
 
     @IBAction func springButtonPressed(_ sender: UIButton) {
-        
+        let animation = Animation.getAnimationList()
         
         guard let animatioName = animation.first?.nameAnimation else {return}
         guard let animationCurve = animation.first?.curveName else {return}
