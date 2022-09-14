@@ -9,8 +9,8 @@ import UIKit
 import SpringAnimation
 
 class AnimationViewController: UIViewController {
-    let animation = Animation.getAnimationList()
-//    var counter = 0
+    let animations = Animation.getAnimationList()
+    var counter = 0
     
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var runButton: UIButton!
@@ -28,12 +28,12 @@ class AnimationViewController: UIViewController {
 
     
     @IBAction func springButtonPressed(_ sender: UIButton) {
-        
-        guard let animatioName = animation.randomElement()?.nameAnimation else {return}
-        guard let animationCurve = animation.randomElement()?.curveName else {return}
-        guard let animationForceValue = animation.randomElement()?.forceValue else {return}
-        guard let animationDurationValue = animation.randomElement()?.durationValue else {return}
-        guard let animationDelay = animation.randomElement()?.delayValue else {return}
+    
+        guard let animatioName = animations.randomElement()?.nameAnimation else {return}
+        guard let animationCurve = animations.randomElement()?.curveName else {return}
+        guard let animationForceValue = animations.randomElement()?.forceValue else {return}
+        guard let animationDurationValue = animations.randomElement()?.durationValue else {return}
+        guard let animationDelay = animations.randomElement()?.delayValue else {return}
 
         springAnimationView.animation = animatioName.rawValue
         springAnimationView.curve = animationCurve.rawValue
@@ -45,8 +45,6 @@ class AnimationViewController: UIViewController {
         springAnimationView.animate()
         
         setupLable()
-        
-        
     }
     
     private func setupLable(){
@@ -57,5 +55,4 @@ class AnimationViewController: UIViewController {
         delayLabel.text = "delay:" + " " + String(Float(springAnimationView.delay))
         
     }
-    
 }
