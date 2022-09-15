@@ -4,16 +4,12 @@
 //
 //  Created by Ilya Sokolov on 13.09.2022.
 //
-
-import SpringAnimation
-import UIKit
-
 struct Animation {
-    let nameAnimation: AnimationPreset
-    let curveName: AnimationCurve
-    let forceValue = CGFloat.random(in: 0...2)
-    let durationValue = CGFloat.random(in: 0...1)
-    let delayValue = CGFloat.random(in: 0...1)
+    let nameAnimation: String
+    let curveName: String
+    let forceValue: Double
+    let durationValue: Double
+    let delayValue: Double
 }
 
 extension Animation {
@@ -27,9 +23,12 @@ extension Animation {
         
         for index in 0..<animations.count {
             let animation = Animation(
-                nameAnimation: animations[index],
-                curveName: curves[index])
-            
+                nameAnimation: animations[index].rawValue,
+                curveName: curves[index].rawValue,
+                forceValue: Double.random(in: 0...1),
+                durationValue: Double.random(in: 0...1),
+                delayValue: Double.random(in: 0...1))
+                 
             animationsList.append(animation)
         }
         

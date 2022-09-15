@@ -26,24 +26,18 @@ class AnimationViewController: UIViewController {
         
     }
 
-    
     @IBAction func springButtonPressed(_ sender: UIButton) {
+                
+        springAnimationView.animation = animations[counter].nameAnimation
+        springAnimationView.curve = animations[counter].curveName
+        springAnimationView.force = animations[counter].forceValue
+        springAnimationView.duration = animations[counter].durationValue
+        springAnimationView.delay = animations[counter].delayValue
+        
+        counter += 1
     
-        guard let animatioName = animations.randomElement()?.nameAnimation else {return}
-        guard let animationCurve = animations.randomElement()?.curveName else {return}
-        guard let animationForceValue = animations.randomElement()?.forceValue else {return}
-        guard let animationDurationValue = animations.randomElement()?.durationValue else {return}
-        guard let animationDelay = animations.randomElement()?.delayValue else {return}
-
-        springAnimationView.animation = animatioName.rawValue
-        springAnimationView.curve = animationCurve.rawValue
-        springAnimationView.force = animationForceValue
-        springAnimationView.duration = animationDurationValue
-        springAnimationView.delay = animationDelay
-        
-        runButton.setTitle(animatioName.rawValue, for: .normal)
+        runButton.setTitle(animations[counter].nameAnimation, for: .normal)
         springAnimationView.animate()
-        
         setupLable()
     }
     
